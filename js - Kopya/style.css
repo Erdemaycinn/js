@@ -1,0 +1,75 @@
+#nextButton {
+    background-color: #9e9e9e; /* Green */
+    border: none;
+    color: black;
+    user-select: none;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 2vw;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+#leftButton {
+    background-color: #9e9e9e; /* Green */
+    border: none;
+    color: black;
+    user-select: none;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 2vw;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+#donationButton {
+    width: 10%;
+    height: 8%;
+    ;
+    border: none;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+#lowerdiv{
+    width: 80%;
+}
+#lowerdiv2{
+    width: 80%;
+}
+#voteButton {
+    
+    height: 100%;
+    width: 30%;
+    border: none;
+    user-select: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition-duration: 0.4s;
+}
+
+#nextButton:hover {
+    background-color: #c5c5c5;
+    box-shadow: 0 0 20px 5px rgba(206, 206, 206, 0.7);
+}
+#nextButton:active {
+    background-color: #6a6a6a;
+    box-shadow: 0 0 30px 15px rgba(95, 95, 95, 0.7);
+  }
+#backButton:hover {
+    background-color: #c5c5c5;
+    box-shadow: 0 0 20px 5px rgba(206, 206, 206, 0.7);
+}
+#backButton:active {
+    background-color: #6a6a6a;
+    box-shadow: 0 0 30px 15px rgba(95, 95, 95, 0.7);
+  }
