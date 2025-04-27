@@ -9,18 +9,19 @@
 <body id = "createpage">
     <div id = "createpetcontainer">
         <h1>Create a New Project</h1>
+
+        
         <form id="projectForm" enctype="multipart/form-data">
             <label for="title">Project Title:</label>
-            <input type="text" id="title" name="title" required><br><br>
+            <input type="text" id="titleinput" name="title" required><br><br>
 
             <label for="description">Project Description:</label><br>
-            <textarea id="description" name="description" required></textarea><br><br>
+            <input id="descriptioninput" name="description" required></input><br><br>
 
-            <label for="picture1">Project Image 1:</label>
-            <input type="file" id="picture1" name="picture1" accept="image/*" required><br><br>
+            <label for="picture1input">Project Image 1:</label>
+            <input  a type="file" id="picture1input" name="picture1" accept="image/*" required><br><br>
 
-            <label for="picture2">Project Image 2:</label>
-            <input type="file" id="picture2" name="picture2" accept="image/*" required><br><br>
+
 
             <button type="submit">Create Project</button>
         </form>
@@ -31,10 +32,10 @@
 
             // Get form data
             const formData = new FormData();
-            const title = document.getElementById('title').value;
-            const description = document.getElementById('description').value;
-            const picture1 = document.getElementById('picture1').files[0];
-            const picture2 = document.getElementById('picture2').files[0];
+            const title = document.getElementById('titleinput').value;
+            const description = document.getElementById('descriptioninput').value;
+            const picture1 = document.getElementById('picture1input').files[0];
+
             const vote = document.getElementById('vote')?.value || 0;
             const wallet = document.getElementById('wallet')?.value || 0;
             const donate = document.getElementById('donate')?.value || 0;
@@ -45,7 +46,7 @@
             formData.append('title', title);
             formData.append('description', description);
             formData.append('picture1', picture1);
-            formData.append('picture2', picture2);
+
             formData.append('vote', vote);
             formData.append('wallet', wallet);
             formData.append('donate', donate);

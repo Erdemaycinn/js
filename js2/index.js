@@ -18,19 +18,18 @@ function updateContent() {
         const currentItem = obj[index];
         title.textContent = (index + 1) + ". sayfa " + (currentItem.title || ''); 
         description.textContent = currentItem.description || '';
-        image.src = currentItem.img1
-        image.src = currentItem.img2
-        voteCount.textContent = "current vote: " + (currentItem.voteCount || '0');
-        donateCount.textContent = "current donation: " + (currentItem.donation || '0');
+        image.src = currentItem.picture1
+        voteCount.textContent = "current vote: " + (currentItem.vote_count || '0');
+        donateCount.textContent = "current donation: " + (currentItem.donate || '0');
     } else {
         title.textContent = "Content Error";
-        description.textContent = "";
+        description.textContent = "dsadas";
         image.src = "";
         voteCount.textContent = "current vote: N/A";
         donateCount.textContent = "current donation: N/A";
     }
 }
-fetch('petitions.json') // Assumes current.json is in the same folder or accessible via URL
+fetch('./projects.json') // Assumes current.json is in the same folder or accessible via URL
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);

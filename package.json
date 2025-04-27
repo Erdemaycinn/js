@@ -1,5 +1,27 @@
 {
   "dependencies": {
-    "@mysten/wallet-standard": "^0.14.7"
-  }
+    "@mysten/wallet-standard": "^0.14.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^1.4.5-lts.2"
+  },
+  "name": "js",
+  "version": "1.0.0",
+  "description": "temp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erdemaycinn/js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erdemaycinn/js/issues"
+  },
+  "homepage": "https://github.com/Erdemaycinn/js#readme"
 }
