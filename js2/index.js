@@ -11,9 +11,6 @@ const donateCount = document.getElementById('donation');
 
 
 
-
-
-
 let index = 0;
 let obj = [];
 function updateContent() {
@@ -33,7 +30,7 @@ function updateContent() {
         donateCount.textContent = "current donation: N/A";
     }
 }
-fetch('current.json') // Assumes current.json is in the same folder or accessible via URL
+fetch('petitions.json') // Assumes current.json is in the same folder or accessible via URL
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
@@ -70,3 +67,4 @@ backButton.onclick = function() {
     updateContent(); // Update content with the previous item
     }   
 }
+

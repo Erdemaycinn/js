@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id = "createpage">
+    <div id = "createpetcontainer">
+        <h1>Create a New Project</h1>
+        <form id="projectForm" enctype="multipart/form-data">
+            <label for="title">Project Title:</label>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="description">Project Description:</label><br>
+            <textarea id="description" name="description" required></textarea><br><br>
+
+            <label for="picture1">Project Image 1:</label>
+            <input type="file" id="picture1" name="picture1" accept="image/*" required><br><br>
+
+            <label for="picture2">Project Image 2:</label>
+            <input type="file" id="picture2" name="picture2" accept="image/*" required><br><br>
+
+            <button type="submit">Create Project</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData();
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const picture1 = document.getElementById('picture1').files[0];
+            const picture2 = document.getElementById('picture2').files[0];
+            const vote = document.getElementById('vote')?.value || 0;
+            const wallet = document.getElementById('wallet')?.value || 0;
+            const donate = document.getElementById('donate')?.value || 0;
+            const vote_count = document.getElementById('vote_count')?.value || 0;
+
+
+            // Append data to form
+            formData.append('title', title);
+            formData.append('description', description);
+            formData.append('picture1', picture1);
+            formData.append('picture2', picture2);
+            formData.append('vote', vote);
+            formData.append('wallet', wallet);
+            formData.append('donate', donate);
+            formData.append('vote_count', vote_count);
+
+            // Send form data to server
+            fetch('http://localhost:3000/save-project', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
