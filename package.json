@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@mysten/wallet-standard": "^0.14.7"
+  }
+}
