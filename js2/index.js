@@ -2,7 +2,7 @@ const nextButton = document.getElementById('nextbutton');
 const backButton = document.getElementById('backbutton');
 const title = document.getElementById('title');
 const description = document.getElementById('description');
-const image = document.getElementById('img');
+const image = document.getElementById('mainimg');
 const voteButton = document.getElementById('voteButton');
 const voteCount = document.getElementById('vote');
 const donateButton = document.getElementById('donationButton');
@@ -18,7 +18,7 @@ function updateContent() {
         const currentItem = obj[index];
         title.textContent = (index + 1) + ". sayfa " + (currentItem.title || ''); 
         description.textContent = currentItem.description || '';
-        image.src = currentItem.picture1
+        image.style.backgroundImage = `url('${currentItem.picture1}')`;
         voteCount.textContent = "current vote: " + (currentItem.vote_count || '0');
         donateCount.textContent = "current donation: " + (currentItem.donate || '0');
     } else {
@@ -29,7 +29,7 @@ function updateContent() {
         donateCount.textContent = "current donation: N/A";
     }
 }
-fetch('./projects.json') // Assumes current.json is in the same folder or accessible via URL
+fetch('./projects/projects.json') // Assumes current.json is in the same folder or accessible via URL
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
@@ -52,7 +52,7 @@ nextButton.onclick = function() {
     index++;
     if (index >= obj.length) {
         alert("No more pages available.");
-        index = obj.length  // Prevent going out of bounds
+        index = obj.length-1  // Prevent going out of bounds
     }else{
         updateContent(); // Update content with the next item
     }

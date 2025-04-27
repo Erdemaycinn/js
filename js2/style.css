@@ -228,3 +228,9 @@
     width: 80%;
     margin-top: 5%;
 }
+#mainimg{
+    background-image: url('senin-fotografin.jpg');
+    background-size: contain; /* veya contain */
+    background-repeat: no-repeat;
+    background-position: center;
+}
