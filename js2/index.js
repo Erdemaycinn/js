@@ -18,7 +18,7 @@ function updateContent() {
     
     if (obj && obj.length > 0 && index >= 0 && index < obj.length) {
         const currentItem = obj[index];
-        title.textContent = (index + 1) + ". sayfa " + (currentItem.title || ''); 
+        title.textContent =  (currentItem.title || ''); 
         description.textContent = currentItem.description || '';
         image.style.backgroundImage = `url('${currentItem.picture1}')`;
         voteCount.textContent = "current vote: " + (currentItem.vote_count || '0');
