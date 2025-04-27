@@ -74,3 +74,33 @@ ChainTogether, topluluk odaklı projelerin sergilendiği ve desteklendiği bir p
 6.  (Geliştirilirse) Oy verin veya bağış yapın.
 
 ## Dosya Yapısı (Önemli Dosyalar)
+```
+js/
+ ├── js2/
+ │ ├── projects/
+ │ │ ├── images/ # Yüklenen proje resimleri
+ │ │ └── projects.json # Proje verileri
+ │ ├── src/ # (Vite projesi için kaynak kodlar buraya taşınabilir)
+ │ ├── create.html # Proje oluşturma sayfası
+ │ ├── index.html # Giriş sayfası
+ │ ├── index.js # Ana sayfa (proje görüntüleme) script'i
+ │ ├── login.ts # Giriş sayfası script'i
+ │ ├── main.html # Ana sayfa (proje görüntüleme)
+ │ ├── package.json # Proje bağımlılıkları ve script'leri
+ │ ├── server.js # Backend Express sunucusu
+ │ ├── style.css # Stil dosyası
+ │ ├── tsconfig.json # TypeScript yapılandırması
+ │ ├── users.json # Kullanıcı bilgileri
+ │ └── walletdetect.ts # Cüzdan algılama script'i
+ │ └── ... (diğer yapılandırma dosyaları)
+ └── ... (üst klasördeki dosyalar)
+```
+## Kullanım
+
+1.  Uygulamayı tarayıcıda açın (`index.html`).
+2.  `users.json` içinde tanımlı bir kullanıcı adı ve şifre ile giriş yapın.
+3.  Başarılı giriş sonrası `main.html` sayfasına yönlendirilirsiniz.
+4.  `<` ve `>` butonları ile projeler arasında gezinin.
+5.  `+` butonuna tıklayarak `create.html` sayfasına gidin ve yeni bir proje oluşturun.
+6.  (Geliştirilirse) Oy verin veya bağış yapın.
+
