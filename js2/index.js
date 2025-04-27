@@ -11,9 +11,11 @@ const donateCount = document.getElementById('donation');
 
 
 
+
 let index = 0;
 let obj = [];
 function updateContent() {
+    
     if (obj && obj.length > 0 && index >= 0 && index < obj.length) {
         const currentItem = obj[index];
         title.textContent = (index + 1) + ". sayfa " + (currentItem.title || ''); 

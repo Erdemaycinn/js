@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/Erdemaycinn/js/issues"
   },
-  "homepage": "https://github.com/Erdemaycinn/js#readme"
+  "homepage": "https://github.com/Erdemaycinn/js#readme",
+  "type":"module"
 }

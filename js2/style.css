@@ -25,7 +25,7 @@
 #description{
     width: 60%;
     height: 100%; 
-    background-color: seagreen;
+    
 }
 #img{
     width: 35%;
@@ -117,8 +117,32 @@
     
     font-size: 1.5vw; /* Optional: make font size responsive too */
     font-weight: bold; /* Adjusted font-weight */
-    margin-left: 1vw;
+    margin-left: auto;
     
+    
+    transition-duration: 0.4s;
+}
+
+#createbutton{
+    width: 3vw;
+    height: 3vw; /* Ensure height is equal to width */
+    background-color: beige; 
+    font-weight: bold; /* Adjusted font-weight */
+    border: none;
+    color: black;
+    user-select: none;
+
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    /* flex-direction: column; /* Remove if you want text centered horizontally */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw; /* Optional: make font size responsive too */
+    margin-right: 15.5vw;
+    margin-left: 15.5vw;
+    cursor: pointer;
+    border-radius: 50%;
     
     transition-duration: 0.4s;
 }
@@ -138,13 +162,21 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5vw; /* Optional: make font size responsive too */
-    margin-right: 1vw;
+    margin-right: auto;
     cursor: pointer;
     border-radius: 50%;
     
     transition-duration: 0.4s;
 }
 
+#createbutton:hover {
+    background-color: rgb(251, 251, 173);
+    box-shadow: 0 0 20px 5px rgba(206, 206, 206, 0.7);
+}
+#createbutton:active {
+    background-color: rgb(251, 251, 173);
+    box-shadow: 0 0 30px 15px rgba(224, 224, 224, 0.7);
+}
 #nextbutton:hover {
     background-color: rgb(251, 251, 173);
     box-shadow: 0 0 20px 5px rgba(206, 206, 206, 0.7);
