@@ -75,7 +75,25 @@ ChainTogether, topluluk odaklı projelerin sergilendiği ve desteklendiği bir p
 
 ## Dosya Yapısı (Önemli Dosyalar)
 ```
-js/ ├── js2/ │ ├── projects/ │ │ ├── images/ # Yüklenen proje resimleri │ │ └── projects.json # Proje verileri │ ├── src/ # (Vite projesi için kaynak kodlar buraya taşınabilir) │ ├── create.html # Proje oluşturma sayfası │ ├── index.html # Giriş sayfası │ ├── index.js # Ana sayfa (proje görüntüleme) script'i │ ├── login.ts # Giriş sayfası script'i │ ├── main.html # Ana sayfa (proje görüntüleme) │ ├── package.json # Proje bağımlılıkları ve script'leri │ ├── server.js # Backend Express sunucusu │ ├── style.css # Stil dosyası │ ├── tsconfig.json # TypeScript yapılandırması │ ├── users.json # Kullanıcı bilgileri │ └── walletdetect.ts # Cüzdan algılama script'i │ └── ... (diğer yapılandırma dosyaları) └── ... (üst klasördeki dosyalar)
+js/
+ ├── js2/
+ │ ├── projects/
+ │ │ ├── images/ # Yüklenen proje resimleri
+ │ │ └── projects.json # Proje verileri
+ │ ├── src/ # (Vite projesi için kaynak kodlar buraya taşınabilir)
+ │ ├── create.html # Proje oluşturma sayfası
+ │ ├── index.html # Giriş sayfası
+ │ ├── index.js # Ana sayfa (proje görüntüleme) script'i
+ │ ├── login.ts # Giriş sayfası script'i
+ │ ├── main.html # Ana sayfa (proje görüntüleme)
+ │ ├── package.json # Proje bağımlılıkları ve script'leri
+ │ ├── server.js # Backend Express sunucusu
+ │ ├── style.css # Stil dosyası
+ │ ├── tsconfig.json # TypeScript yapılandırması
+ │ ├── users.json # Kullanıcı bilgileri
+ │ └── walletdetect.ts # Cüzdan algılama script'i
+ │ └── ... (diğer yapılandırma dosyaları)
+ └── ... (üst klasördeki dosyalar)
 ```
 ## Kullanım
 
