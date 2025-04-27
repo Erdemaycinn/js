@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": ["esnext", "dom"],
+      "strict": true,
+      "outDir": "dist",
+      "allowJs": true
+    }
+  }
+  

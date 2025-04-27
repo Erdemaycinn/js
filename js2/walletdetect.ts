@@ -1,15 +1,33 @@
-import { getWallets } from '@mysten/wallet-standard';
+import { getWallets, type Wallet } from '@mysten/wallet-standard';
 
-async function getActiveAddress() {
-  const wallet = getWallets().get().find(w => w.name.includes('Sui'));
-  if (!wallet) throw new Error('No Sui wallet extension found');
+export async function getConnectedWalletAddress(): Promise<string | null> {
+  // Initialize the Wallets API (fires off the registration handshake under the hood)
+  const walletsApi = getWallets();
 
+  // Grab whatever wallets have registered so far
+  const all: readonly Wallet[] = walletsApi.get();
 
-  
-  await (wallet.features['standard:connect'] as { connect: () => Promise<void> }).connect();   // user approves
-return wallet.accounts[0]?.address || null;
+  // Pick the first one that implements the standard connect feature
+  const wallet = all.find((w) => 'standard:connect' in w.features);
+  if (!wallet) {
+    console.warn('No Sui wallet extension found');
+    return null;
+  }
+
+  // Ask the user to approve a connection
+  const connectMethod = wallet.features['standard:connect'] as {
+    connect: () => Promise<void>;
+  };
+  await connectMethod.connect();
+
+  // Grab the first account (address) exposed by that wallet
+  return wallet.accounts[0]?.address ?? null;
 }
 
-getActiveAddress()
-  .then(addr => console.log('User address:', addr))
-  .catch(err  => console.error(err));
+// Expose on window so plain JS can call it
+declare global {
+  interface Window {
+    getConnectedWalletAddress: () => Promise<string | null>;
+  }
+}
+window.getConnectedWalletAddress = getConnectedWalletAddress;
