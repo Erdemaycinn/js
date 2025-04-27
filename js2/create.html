@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Project</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #homeButton {
+            display: flex; /* Allows setting padding/margin */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            background-image: "chainlogo.png"; /* Path to your home icon */
+            margin-bottom: 20px; /* Space below the button */
+            
+            color: #333; /* Dark text */
+            text-decoration: none; /* Remove underline */
+            
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+    </style>
 </head>
 <body id = "createpage">
+    
+    <a href="main.html" id="homeButton" role="button"><img src="chainlogo.png" alt="Placeholder Image" style="width: 40%; height: auto;"></a>
     <div id = "createpetcontainer">
+        
         <h1>Create a New Project</h1>
 
         
