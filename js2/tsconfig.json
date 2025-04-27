@@ -7,6 +7,11 @@
       "strict": true,
       "outDir": "dist",
       "allowJs": true
-    }
+    },
+    "files": [],
+    "references": [
+      { "path": "./tsconfig.app.json" },
+      { "path": "./tsconfig.node.json" }
+    ]
   }
   
